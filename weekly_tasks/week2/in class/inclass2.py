@@ -25,7 +25,7 @@ SUITS = ['C', 'D', 'H', 'S']
 #iterables only to create a new one, there is a much more readable and
 #preferable way to proceed: using list comprehensions. Read this
 #explanation:
-#http://www.secnetix.de/olli/Python/list_comprehensions.hawk
+#https://www.pythonforbeginners.com/basics/list-comprehensions-in-python
 #After that, re-write the deck creation, DECK2, by using list
 #comprehension. The new way of creating the dect should be just a
 #single line.
