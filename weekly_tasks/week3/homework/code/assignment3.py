@@ -228,4 +228,4 @@ to be instituted over the whole and over the parts of this extensive country."
 # frequency roughly punishes words that occur in many of the documents
 # in the corpus. It is fairly easy to extend this assignment to use
 # tf-idf scores instead. If you're interested, look up the Wikipedia page
-# https://en.wikipedia.org/wiki/Tf%E2%80%93idf or ask Bas if you need help.
+# https://en.wikipedia.org/wiki/Tf%E2%80%93idf
