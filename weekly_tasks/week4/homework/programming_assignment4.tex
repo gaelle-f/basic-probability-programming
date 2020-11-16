@@ -66,13 +66,15 @@
 \usepackage{amsmath}
 
 \title{Programming Assignment 4 -- Basic Probability, Computing and Statistics 2017}
-\author{Jakub Dotla\v{c}il}
-\date{Submission deadline: Sunday, November 25th, 8 p.m.}
+\author{Teacher: Lina Murady\\
+  Coordinator: Wilker Aziz\\
+  Written by: Jakub Dotla\v{c}il}
+\date{Submission deadline: Wednesday, November 25th, 6 p.m.}
 
 \begin{document}
 \maketitle
 
-\paragraph{Note:} if the assignment is unclear to you or if you get stuck, do not hesitate to contact \href{mailto:j.dotlacil@uva.nl}{me}. You can also post a question on Canvas.
+\paragraph{Note:} if the assignment is unclear to you or if you get stuck, do not hesitate to contact \href{mailto:l.murady@uva.nl}{me}. You can also post a question on Canvas.
 
 \section{Assignment}
 
@@ -151,8 +153,7 @@ implemented in many programming languages (including Python) as a function calle
 To sum up, you have to avoid turning that joint probabilities turn to 0, and to do so, you have to work with log-probs. Make sure to transform probabilities to log-probs before doing any predictions.
 
 \subsection{Your Task}
-We have implemented a commandline interface and a skeleton of the Naive Bayes class for you. Both can be 
-found \href{https://github.com/BasicProbability/Programming2018/blob/master/weekly\%20tasks/week\%204/homework/files_for_development.zip}{here}. Do not manipulate \texttt{naive\_bayes\_classifier.py}. Your task is to only work on the methods of the class NaiveBayes, which is in the file naive\_bayes.py. Please implement the methods that are marked with a TODO. For prediction, please output the 
+We have implemented a skeleton of the Naive Bayes class for you. It can be found in the notebook provided on Canvas. Do not manipulate \texttt{naive\_bayes\_classifier.py}. Your task is to only work on the methods of the class NaiveBayes, which is in the file naive\_bayes.py. Please implement the methods that are marked with a TODO. For prediction, please output the 
 a posteriori most likely label. Feel free to add any methods and data structures that you deem necessary.
 
 \paragraph{Challenge yourself} On the development set, which we provide together with the code, you
@@ -161,28 +162,10 @@ than that? Try different smoothing constants or try to change the words (e.g. by
 try to include more features (characters, for example). The possibilities are limitless! 
 
 \subsection{Running the Code}
-You will have to supply commandline arguments to the script this time. This can be done in Pycharm. 
-Right-click on the run symbol and select \textit{Add parameters}. In the field \textit{script parameters}
-you then have to enter the following for \texttt{naive\_bayes\_classifier.py}
-\begin{center}
-\texttt{--training-corpus-dir <Path to 20news-18828> --test-set-directory <Path to dev-set>}
-\end{center}
-(Note: the line break was inserted by \LaTeX and is not needed in Pycharm.)
-You can optionally add
-\begin{center}
-\texttt{--keys <Path to dev\_key.txt>}
-\end{center}
-in which case the script will also run an evaluation of your output. For this to work you have to assign
-a string containing your Python command (either \texttt{python} or \texttt{python3} for most of you)
-to the variable \texttt{my\_python} at the top of the file \texttt{naive\_bayes\_classifier.py}.
-
+Follow the provided notebook on Canvas in order to run the code.
+The second-to-last cell trains the classifier, saves the predictions and evaluates for you.
 The output will be a file called \texttt{predictions.txt}. You can also separately run an evaluation of your output using the
-accuracy checker (which is the same script used if you provide the \texttt{--keys} argument above). 
-For that, you will have to pass argument to \texttt{accuracy\_checker.py}, as well. These
-are simply
-\begin{center}
-\texttt{<Path to predictions.txt> <Path to dev\_keys.txt>}
-\end{center} 
+accuracy checker. This is shown in the notebook.
 
 \section{Grading}
 You will be graded on a test set that we will make available during peer review. The test set
