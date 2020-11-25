@@ -66,9 +66,11 @@
 \usepackage{amsmath}
 
 \newcommand{\link}[1]{\footnote{\color{blue}\href{#1}{#1}}}
-\title{Programming Assignment 5 -- Basic Probability, Computing and Statistics 2018}
-\author{Jakub Dotla\v{c}il}
-\date{Submission deadline: Sunday, December 2nd, 8 p.m.}
+\title{Programming Assignment 5 -- Basic Probability, Computing and Statistics 2020-2021}
+\author{Teacher: Lina Murady \\
+  Coordinator: Wilker Aziz \\
+  Written by: Jakub Dotla\v{c}il}
+\date{Submission deadline: Wednesday, December 2nd, 6 p.m.}
 
 \begin{document}
 \maketitle
@@ -80,10 +82,10 @@
 This week we are going to implement the expectation maximisation algorithm (EM). 
 This algorithm allows us to estimate the parameters of a mixture model, as discussed in the theoretical part of the course.
 You can read more about EM in class notes from Basic Probability: Theory\link{https://github.com/BasicProbability/LectureNotes/blob/master/chapter6/chapter6.pdf}. 
-A more concrete, incremental introduction (using different notation) can be found here\footnote{\href{https://canvas.uva.nl/courses/536/files/56289?module_item_id=20933}{https://canvas.uva.nl/courses/536/files/56289?module\_item\_id=20933}}.
+A more concrete, incremental introduction (using different notation) can be found here\footnote{\href{https://canvas.uva.nl/courses/17535/files/3054784?module_item_id=661362}{https://canvas.uva.nl/courses/17535/files/3054784?module\_item\_id=661362}}.
 The data we will be working with have been generated from a mixture model whose components are \emph{geometric} distributions.
 In week 6 of the theoretical part of the course, we discussed EM for this setting in class. 
-We highly recommend you look at slides of that session\footnote{\href{https://canvas.uva.nl/courses/2220/files/274398?module_item_id=102052}{https://canvas.uva.nl/courses/2220/files/274398?module\_item\_id=102052}} and  at this sheet with all the computations\footnote{\href{https://docs.google.com/spreadsheets/d/1jlfex_GhObM_00iOnop4AEOW07pxVn1AGavOTcrAmBg}{https://docs.google.com/spreadsheets/d/1jlfex\_GhObM\_00iOnop4AEOW07pxVn1AGavOTcrAmBg}}.
+We highly recommend you look at slides of that session\footnote{\href{https://canvas.uva.nl/courses/17535/files/3054783?module_item_id=661363}{https://canvas.uva.nl/courses/17535/files/3054783?module\_item\_id=661363}} and  at this sheet with all the computations\footnote{\href{https://docs.google.com/spreadsheets/d/1jlfex_GhObM_00iOnop4AEOW07pxVn1AGavOTcrAmBg}{https://docs.google.com/spreadsheets/d/1jlfex\_GhObM\_00iOnop4AEOW07pxVn1AGavOTcrAmBg}}.
 As you will see, you can test your EM implementation by checking if the numbers you produce match those in the sheet. 
 However, note that the sheet uses probabilities, and you should use log-probabilities.
 
@@ -100,7 +102,7 @@ the reviewers can plug in that fixed starting point.
 
 \paragraph{Implementation}
 
-I have provided a partial implementation for you in the file \texttt{assignment5.py}. 
+We have provided a partial implementation for you in the notebook available on Canvas.
 You have to implement the E-step and the M-step. The positions where you have to fill in your code are marked with TODO. Before you start implementing anything,
 make yourself familiar with the code and ensure that you understand all the data structures it uses. You can also discuss the basic code on the forum. As usual, feel
 free to add any variables or functions/methods that you deem necessary. If you want to remove any of the data structures or methods that we provide, that's also fine.
@@ -141,7 +143,7 @@ the bigger number ($ c $ according to our assumption). This way, we make sure th
 
 
 
-We have provided several functions (in \texttt{logarithms.py}) that help you working with log-probabilities.
+We have provided several functions in the notebook that help you working with log-probabilities.
 Most importantly, $\texttt{log\_add}$ implements the log-sum-exp trick, so if $c = \log(a)$ and $d = \log(b)$, then
 \begin{align}
   \texttt{log\_add}(c, d) 
@@ -171,7 +173,7 @@ Debug your code using a simple example with two components and the following par
   w_1^{(0)} = 0.2, \; w_2^{(0)} = 0.8, \qquad \theta_1^{(0)} = 0.2, \theta_2^{(0)} = 0.6,\;
 \end{align}
 where $w_1^{(0)}, w_2^{(0)}$ are the initial mixture weights and $\theta_1^{(0)}, \theta_2^{(0)}$ are the initial parameters of the two geometric distributions.
-If you moreover use the example data (\texttt{geometric\_example\_data.py}), the setting is identical to the one discussed in class in week 6 of the theoretical part (see the slides of that session\footnote{\href{https://canvas.uva.nl/courses/2220/files/274398?module_item_id=102052}{https://canvas.uva.nl/courses/2220/files/274398?module\_item\_id=102052}} and  sheet\footnote{\href{https://docs.google.com/spreadsheets/d/1jlfex_GhObM_00iOnop4AEOW07pxVn1AGavOTcrAmBg}{https://docs.google.com/spreadsheets/d/1jlfex\_GhObM\_00iOnop4AEOW07pxVn1AGavOTcrAmBg}} mentioned above).
+If you moreover use the example data (\texttt{geometric\_example\_data.txt}), the setting is identical to the one discussed in class in week 6 of the theoretical part (see the slides of that session\footnote{\href{https://canvas.uva.nl/courses/17535/files/3054783?module_item_id=661363}{https://canvas.uva.nl/courses/17535/files/3054783?module\_item\_id=661363}} and  sheet\footnote{\href{https://docs.google.com/spreadsheets/d/1jlfex_GhObM_00iOnop4AEOW07pxVn1AGavOTcrAmBg}{https://docs.google.com/spreadsheets/d/1jlfex\_GhObM\_00iOnop4AEOW07pxVn1AGavOTcrAmBg}} mentioned above).
 
 
 Recall that EM is guaranteed to always increase the log-likelihood of the data. Therefore, the code prints the log-likeihood after each iteration.
