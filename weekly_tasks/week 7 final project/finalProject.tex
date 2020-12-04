@@ -66,10 +66,9 @@
 \usepackage{amsmath}
 
 
-\title{Final Project -- Basic Probability: Programming\\[2mm]
-\large{2018-2019, Master of Logic, University of Amsterdam}}
-\author{Instructors: Jakub Dotla\v{c}il}
-\date{Submission deadline: December 16, 8pm}
+\title{Final Project -- Basic Probability: Programming}
+\author{Instructors: Lina Murady}
+%\date{Submission deadline: December 16, 8pm}
 
 \begin{document}
 \maketitle
@@ -80,7 +79,7 @@ In this project you will perform your own data analysis. Your task is
 to use a technique known as linear regression (see below) to predict the median price of houses
 in suburbs of Boston in the 1980s. The relevant information about the data can be found
 \href{http://www.cs.toronto.edu/\%7Edelve/data/boston/bostonDetail.html}{here}. The variable that you need
-to predict is stored in the last column, called MEDV.
+to predict is stored in the last column, called MEDV.\footnote{Assignment based on original material by Jakub Dotla\v{c}il.}
 
 This project will teach you two things: first, it introduces you to a continuous distribution, namely
 the Gaussian. Linear regression and other Gaussian models are very useful in practice and you will
@@ -229,9 +228,9 @@ increase in $ R^{2} $.
 
 \section{Deliverables}
 \begin{itemize}
-\item \textbf{Code:} A code that you have written, collected in one python file. This code should be executable either from the command line or from Pycharm (or both).
+\item \textbf{Code:} A code that you have written, collected in one Jupyter notebook file. 
 \item The code can use libraries (numpy, matplotlib), but \emph{it must not use a previously implemented linear regression}! You have to build the regression yourself.
-\item Readme file: The file specifies how to run the code if necessary (for example, because running it requires optional arguments). The file should also shortly summarize what you picked as the baseline model, what you picked as the final model, and (very shortly) why you made this choice.
+\item A notebook embeds code, documentation, and results in one file. It's the best alternative to a \emph{report} in a programming course. Use Markdown cells for documentation: summarise what you picked as the baseline model, what you picked as the final model, and why you made this choice. 
 \end{itemize}
 
 \section{Assessment}
@@ -239,13 +238,13 @@ The lecturer of the course determines the final grade for the project.
 
 Here is the break-down of what I consider:
 \begin{itemize}
-    \item 2 points: The code should be well documented, so that I can understand what each class and method and function does. The code should run (from Pycharm or command line) and (at least) print the baseline model and its $R^2$, the best model and its $R^2$, and plot at least one graph.
+    \item 1 points: The code should be well documented, so that I can understand what each class and method and function does. 
+    \item 2 points: The code should run (from Jupyter notebook) and (at least) print the baseline model and its $R^2$, the best model and its $R^2$, and plot at least one graph.
     \item 3 points: Linear regression is implemented correctly and it works with numpy arrays (e.g., it does not loop through lists).
     \item 1 point: Plotting function works and it plots a graph showing the relation between (some subset of) features and the target variable. The data points are printed as dots and the linear regression fit is also shown in the graph.
     \item 1 point: The best model has $R^2$ higher than 0.7
     \item 1 point: The best model has $R^2$ higher than 0.75
     \item 1 point: The best model has $R^2$ higher than 0.8
-    \item 1 point: Description and discussion in the readme file is followable, it is explained what the baseline and best models are. 
 \end{itemize}
 
 
