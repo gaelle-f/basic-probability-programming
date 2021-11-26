@@ -56,7 +56,7 @@ class Bernoulli(object):
     """Adds""" 
     if isinstance(other, Bernoulli):
       # Ex 11: Check whether the parameter p of `other` is the same as the parameter of `self`.
-      # If so, return a Bernoulli(2, p) object. If not, raise an appropriave ValueError.
+      # If so, return a Binomial(2, p) object. If not, raise an appropriave ValueError.
       # ...
       pass
 
@@ -187,7 +187,7 @@ class Binomial(object):
 # and p=0.2 and print it.
 # --> See above
 
-# print("Test 8.1", str(Binomial(0.5, 5)) == "Binomial(0.5, 5)") 
+# print("Test 8.1", str(Binomial(5, 0.5)) == "Binomial(5, 0.5)") 
 
 
 ### Exercise 9
