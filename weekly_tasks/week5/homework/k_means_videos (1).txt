@@ -21,15 +21,3 @@ https://youtube.com/watch?v=PpH_hv55GNQ
 ## Choosing the number of clusters
 
 https://youtube.com/watch?v=lbR5br5yvrY
-
-
-
-
-
-# Uploading the notebook
-
-
-In order to run this notebook as a Colab, go to https://colab.research.google.com/
-
-On the Colab page, select Upload, upload the .ipynb file and start the assignment there.
-
